@@ -6,11 +6,11 @@
 /*   By: legrandc <legrandc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:59:37 by legrandc          #+#    #+#             */
-/*   Updated: 2023/10/30 18:02:27 by legrandc         ###   ########.fr       */
+/*   Updated: 2023/11/02 17:10:52 by legrandc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= '>' || c <= '~');
 }

@@ -6,11 +6,11 @@
 /*   By: legrandc <legrandc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:47:42 by legrandc          #+#    #+#             */
-/*   Updated: 2023/10/30 17:48:09 by legrandc         ###   ########.fr       */
+/*   Updated: 2023/11/02 17:10:55 by legrandc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit(int c)
+int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

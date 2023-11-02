@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: legrandc <legrandc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 18:03:46 by legrandc          #+#    #+#             */
-/*   Updated: 2023/11/02 15:35:13 by legrandc         ###   ########.fr       */
+/*   Created: 2023/11/02 16:26:05 by legrandc          #+#    #+#             */
+/*   Updated: 2023/11/02 17:10:33 by legrandc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
+	size_t	dst_len;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	dst_len = ft_strlen(dst);
+	return (dst_len + ft_strlcpy(dst + dst_len, src, size - dst_len));
 }
