@@ -53,17 +53,12 @@ BONUS_SRC =	ft_lstnew.c \
 
 OBJ = $(SRC:.c=.o)
 
-HEADER = libft.h
-
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
-
 
 all: ${NAME}
 
-
 $(NAME): ${OBJ}
 	ar rc ${NAME} ${OBJ}
-
 
 bonus: ${OBJ} ${BONUS_OBJ}
 	ar rc ${NAME} ${BONUS_OBJ} ${OBJ}
