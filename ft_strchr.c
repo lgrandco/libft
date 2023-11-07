@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: legrandc <legrandc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leo <leo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:54:55 by legrandc          #+#    #+#             */
-/*   Updated: 2023/11/02 17:05:30 by legrandc         ###   ########.fr       */
+/*   Updated: 2023/11/07 01:22:50 by leo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s && *s != c)
+	while (*s && *s != (char)c)
 		s++;
-	if (*s == c)
-		return (s);
-	return (0);
+	if (*s == (char)c)
+		return ((char *)s);
+	return (NULL);
 }

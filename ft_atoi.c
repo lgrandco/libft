@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leo <leo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 16:54:55 by legrandc          #+#    #+#             */
-/*   Updated: 2023/11/07 02:37:30 by leo              ###   ########.fr       */
+/*   Created: 2023/11/04 18:47:29 by leo               #+#    #+#             */
+/*   Updated: 2023/11/07 01:30:46 by leo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_isspace(int c)
 {
-	size_t	i;
+	return ((c >= 9 && c <= 13) || c == ' ');
+}
 
-	i = 0;
-	while (s[i])
-		i++;
-	while (i && s[i] != (char)c)
-		i--;
-	if (s[i] == (char)c)
-		return ((char *)s + i);
-	return (NULL);
+int	ft_atoi(const char *nptr)
+{
+	int	ret;
+	int	sign;
+
+	ret = 0;
+	sign = 1;
+	while (ft_isspace(*nptr))
+		nptr++;
+	if (*nptr == '-')
+	{
+		sign = -1;
+		nptr++;
+	}
+	else if (*nptr == '+')
+		nptr++;
+	while (ft_isdigit(*nptr))
+	{
+		ret = ret * 10 + *nptr - '0';
+		nptr++;
+	}
+	return (ret * sign);
 }

@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leo <leo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 16:54:55 by legrandc          #+#    #+#             */
-/*   Updated: 2023/11/07 02:37:30 by leo              ###   ########.fr       */
+/*   Created: 2023/11/06 20:24:17 by leo               #+#    #+#             */
+/*   Updated: 2023/11/07 04:32:14 by leo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_itoa(int n)
 {
-	size_t	i;
+	long int	nb;
+	size_t		len;
+	char		*ret;
 
-	i = 0;
-	while (s[i])
-		i++;
-	while (i && s[i] != (char)c)
-		i--;
-	if (s[i] == (char)c)
-		return ((char *)s + i);
-	return (NULL);
+	nb = n;
+	len = n == 0;
+	if (nb < 0 && ++len)
+		nb = -nb;
+	while (n && ++len)
+		n /= 10;
+	ret = ft_calloc(len + 1, 1);
+	if (!ret)
+		return (NULL);
+	*ret = '-';
+	if (!nb)
+		*ret = '0';
+	while (nb)
+	{
+		ret[--len] = nb % 10 + '0';
+		nb /= 10;
+	}
+	return (ret);
 }
