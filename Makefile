@@ -57,12 +57,10 @@ BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all: ${NAME}
 
-$(NAME): ${OBJ}
-	ar rc ${NAME} ${OBJ}
+$(NAME): ${OBJ} $(BONUS_OBJ)
+	ar rc ${NAME} ${OBJ} $(BONUS_OBJ)
 
-bonus: ${OBJ} ${BONUS_OBJ}
-	ar rc ${NAME} ${BONUS_OBJ} ${OBJ}
-
+bonus: ${NAME}
 
 clean:
 	${RM} ${OBJ} ${BONUS_OBJ}
