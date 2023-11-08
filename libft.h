@@ -6,7 +6,7 @@
 /*   By: leo <leo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:55:36 by legrandc          #+#    #+#             */
-/*   Updated: 2023/11/07 00:52:09 by leo              ###   ########.fr       */
+/*   Updated: 2023/11/07 22:42:58 by leo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+
+# define HEX_UP "0123456789ABCDEF"
+# define HEX_LOW "0123456789abcdef"
+# define DEC "0123456789"
 
 typedef struct s_list
 {
