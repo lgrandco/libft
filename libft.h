@@ -6,7 +6,7 @@
 /*   By: leo <leo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:55:36 by legrandc          #+#    #+#             */
-/*   Updated: 2023/11/07 22:42:58 by leo              ###   ########.fr       */
+/*   Updated: 2023/11/09 09:11:34 by leo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ typedef struct s_list
 }					t_list;
 
 /* FUNCTIONS */
+unsigned int		ft_abs(int n);
+int					ft_max(int a, int b);
+int					ft_min(int a, int b);
+char				*ft_itoa_base(unsigned long n, char *base);
 char				*ft_strtrim(char const *s1, char const *set);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),

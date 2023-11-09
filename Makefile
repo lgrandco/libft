@@ -40,6 +40,10 @@ SRC =	ft_atoi.c \
 	ft_memmove.c \
 	ft_strlcpy.c \
 	ft_strlcat.c \
+	ft_itoa_base.c \
+	ft_abs.c \
+	ft_min.c \
+	ft_max.c \
 
 BONUS_SRC =	ft_lstnew.c \
 		ft_lstadd_front.c \
