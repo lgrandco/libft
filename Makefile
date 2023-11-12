@@ -59,10 +59,6 @@ BONUS_SRC =	ft_lstnew.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 
-SRC := $(addprefix $(SRC_PATH)/,$(SRC))
-
-BONUS_SRC := $(addprefix $(SRC_PATH)/,$(BONUS_SRC))
-
 OBJ = $(SRC:.c=.o)
 
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
